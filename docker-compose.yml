@@ -12,9 +12,6 @@ services:
     volumes:
       - ${HOST_STEAMCMD_FOLDER}:/serverdata/steamcmd
       - ${HOST_GAME_SERVER_FILES}:/serverdata/serverfiles
-    ports:
-      - 27015:27015
-      - 27015:27015/udp
     networks:
       macvlan01:
         ipv4_address: "${GAMESERVER_IP}"
