@@ -12,6 +12,8 @@ services:
     volumes:
       - ${HOST_STEAMCMD_FOLDER}:/serverdata/steamcmd
       - ${HOST_GAME_SERVER_FILES}:/serverdata/serverfiles
+      #Option load custom server cfg
+      - ${SERVER_CFG}:/serverdata/serverfiles/${GAME_NAME}/cfg/server.cfg
     networks:
       macvlan01:
         ipv4_address: "${GAMESERVER_IP}"
